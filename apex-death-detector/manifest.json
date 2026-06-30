@@ -1,0 +1,67 @@
+{
+  "manifest_version": 1,
+  "name": "Apex Death Detector",
+  "description": "Apex Legends 死亡检测 & 抖音自动启动工具",
+  "version": "1.0.0",
+  "author": "Apex Death Detector",
+  "icon": "assets/icon.png",
+  "icons": {
+    "128": "assets/icon.png"
+  },
+  "enable_frames": false,
+  "content_scripts": [],
+  "launch_events": [
+    {
+      "type": "GameUpdate",
+      "game_id": 21566
+    }
+  ],
+  "permissions": [
+    "GameInfo",
+    "GameEvents",
+    "Windows",
+    "Shell",
+    "Storage",
+    "Hub"
+  ],
+  "required_features": [
+    "game_info",
+    "game_events",
+    "events"
+  ],
+  "data": {
+    "index": "index.html"
+  },
+  "background": {
+    "html": "background.html",
+    "js": ["background.js"]
+  },
+  "windows": {
+    "background": {
+      "file": "background.html",
+      "transparent": true,
+      "resizable": false,
+      "size": {
+        "width": 1,
+        "height": 1
+      },
+      "position": {
+        "x": -1000,
+        "y": -1000
+      }
+    },
+    "index": {
+      "file": "index.html",
+      "transparent": false,
+      "resizable": true,
+      "size": {
+        "width": 400,
+        "height": 500
+      },
+      "min_size": {
+        "width": 350,
+        "height": 400
+      }
+    }
+  }
+}

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apex Death Detector - 设置</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Apex Death Detector</h1>
+            <p class="subtitle">死亡检测 & 抖音自动启动</p>
+        </header>
+
+        <main>
+            <section class="settings-section">
+                <h2>设置</h2>
+
+                <div class="setting-item">
+                    <label for="douyin-path">抖音路径</label>
+                    <div class="input-group">
+                        <input type="text" id="douyin-path" placeholder="点击选择抖音可执行文件，或手动输入路径">
+                        <button id="browse-btn" class="btn-secondary">浏览</button>
+                    </div>
+                    <p class="hint">例如: C:\Program Files\douyin\douyin.exe</p>
+                </div>
+
+                <div class="setting-item">
+                    <label>当前状态</label>
+                    <div id="status-display" class="status-display">
+                        <span class="status-label">等待游戏开始...</span>
+                    </div>
+                </div>
+            </section>
+
+            <section class="info-section">
+                <h2>触发逻辑说明</h2>
+                <table class="trigger-table">
+                    <thead>
+                        <tr>
+                            <th>游戏事件</th>
+                            <th>判断条件</th>
+                            <th>执行操作</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>被击倒</td>
+                            <td>血量归零，进入倒地状态</td>
+                            <td>不做任何操作</td>
+                        </tr>
+                        <tr>
+                            <td>死亡成盒</td>
+                            <td>teammate_X.state = "death"</td>
+                            <td>启动/切换到抖音</td>
+                        </tr>
+                        <tr>
+                            <td>原地救援</td>
+                            <td>healed_from_ko 事件</td>
+                            <td>切回 Apex</td>
+                        </tr>
+                        <tr>
+                            <td>信标/移动复活</td>
+                            <td>respawn 事件</td>
+                            <td>切回 Apex</td>
+                        </tr>
+                        <tr>
+                            <td>全队淘汰</td>
+                            <td>team_state = "eliminated"</td>
+                            <td>智能收尾</td>
+                        </tr>
+                        <tr>
+                            <td>新对局开始</td>
+                            <td>match_start 事件</td>
+                            <td>重置所有状态</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+        </main>
+
+        <footer>
+            <p>Apex Legends © Electronic Arts</p>
+        </footer>
+    </div>
+
+    <script src="index.js"></script>
+</body>
+</html>
