@@ -1,0 +1,182 @@
+/* Apex Death Detector - 设置界面样式 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', 'Microsoft YaHei', sans-serif;
+    background-color: #1a1a2e;
+    color: #eaeaea;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.container {
+    max-width: 380px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+header {
+    text-align: center;
+    padding: 20px 0;
+    border-bottom: 1px solid #333;
+    margin-bottom: 20px;
+}
+
+header h1 {
+    font-size: 20px;
+    color: #ff4655;
+    margin-bottom: 5px;
+}
+
+.subtitle {
+    font-size: 12px;
+    color: #888;
+}
+
+h2 {
+    font-size: 16px;
+    color: #fff;
+    margin-bottom: 15px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid #ff4655;
+}
+
+section {
+    margin-bottom: 25px;
+}
+
+.setting-item {
+    margin-bottom: 20px;
+}
+
+.setting-item label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: #ccc;
+}
+
+.input-group {
+    display: flex;
+    gap: 8px;
+}
+
+input[type="text"] {
+    flex: 1;
+    padding: 10px 12px;
+    background-color: #16213e;
+    border: 1px solid #333;
+    border-radius: 4px;
+    color: #fff;
+    font-size: 13px;
+}
+
+input[type="text"]:focus {
+    outline: none;
+    border-color: #ff4655;
+}
+
+input[type="text"]::placeholder {
+    color: #666;
+}
+
+.btn-secondary {
+    padding: 10px 16px;
+    background-color: #333;
+    border: none;
+    border-radius: 4px;
+    color: #fff;
+    cursor: pointer;
+    font-size: 13px;
+    transition: background-color 0.2s;
+}
+
+.btn-secondary:hover {
+    background-color: #444;
+}
+
+.hint {
+    font-size: 11px;
+    color: #666;
+    margin-top: 6px;
+}
+
+.status-display {
+    background-color: #16213e;
+    border-radius: 4px;
+    padding: 12px;
+}
+
+.status-badge {
+    display: inline-block;
+    padding: 6px 12px;
+    border-radius: 4px;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.status-waiting {
+    background-color: #666;
+    color: #fff;
+}
+
+.status-playing {
+    background-color: #28a745;
+    color: #fff;
+}
+
+.status-dead {
+    background-color: #dc3545;
+    color: #fff;
+}
+
+.status-douyin {
+    background-color: #007bff;
+    color: #fff;
+}
+
+.status-eliminated {
+    background-color: #6c757d;
+    color: #fff;
+}
+
+.trigger-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 11px;
+}
+
+.trigger-table th,
+.trigger-table td {
+    padding: 8px 6px;
+    text-align: left;
+    border-bottom: 1px solid #333;
+}
+
+.trigger-table th {
+    color: #888;
+    font-weight: 600;
+}
+
+.trigger-table td:first-child {
+    color: #ff4655;
+    font-weight: 600;
+}
+
+.info-section {
+    background-color: #16213e;
+    border-radius: 6px;
+    padding: 15px;
+}
+
+footer {
+    text-align: center;
+    padding-top: 20px;
+    border-top: 1px solid #333;
+    font-size: 11px;
+    color: #666;
+}
